@@ -1,0 +1,17 @@
+{
+  "name": "aotujs",
+  "version": "1.0.0",
+  "description": "A desktop app to auto login and watch online courses",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "YourName",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.6.0"
+  },
+  "devDependencies": {
+    "electron": "^35.2.0"
+  }
+}
