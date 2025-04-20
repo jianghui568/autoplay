@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>登录观看系统</title>
+    <style>
+        .container { padding: 20px; }
+        #status { margin-top: 20px; color: #666; }
+    </style>
 </head>
 <body>
-<h2>登录</h2>
-<label>用户名：<input type="text" id="username" value="1"></label><br><br>
-<label>密码：<input type="password" id="password" value="1"></label><br><br>
-<button id="openBtn">打开网页</button>
+<div class="container">
+    <h1>Electron 内嵌自动化演示</h1>
+    <input type="text" id="url" value="https://www.baidu.com" style="width: 300px;">
+    <button onclick="start()">执行自动化</button>
+    <div id="status">就绪</div>
+</div>
 
-<script src="index.js"></script>
+<script>
+    async function start() {
+        try {
+            const result = await window.electronAPI.performAutomation('https://www.baidu.com')
+
+            if (result.success) {
+                console.log('自动化操作成功')
+            } else {
+                console.error('失败:', result.error)
+            }
+        } catch (error) {
+            console.error('通信错误:', error)
+        }
+    }
+</script>
 </body>
 </html>

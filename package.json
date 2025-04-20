@@ -9,9 +9,7 @@
   "author": "YourName",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^24.6.0"
-  },
-  "devDependencies": {
-    "electron": "^35.2.0"
+    "electron": "^25.3.2",
+    "puppeteer-core": "^21.4.1"
   }
 }
