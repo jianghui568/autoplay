@@ -9,7 +9,8 @@
 <body>
 <div class="container">
     <h1>Electron 内嵌自动化演示</h1>
-    <input type="text" id="url" value="https://www.baidu.com" style="width: 300px;">
+<!--    <input type="text" id="url" value="https://www.baidu.com" style="width: 300px;">-->
+    <input type="text" id="url" value="https://www.neup8d.com:9010/" style="width: 300px;">
     <button onclick="start()">执行自动化</button>
     <div id="status">就绪</div>
 </div>
@@ -17,7 +18,7 @@
 <script>
     async function start() {
         try {
-            const result = await window.electronAPI.performAutomation('https://www.baidu.com')
+            const result = await window.electronAPI.performAutomation('https://www.neup8d.com:9010/')
 
             if (result.success) {
                 console.log('自动化操作成功')
